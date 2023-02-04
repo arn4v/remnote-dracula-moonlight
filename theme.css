@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  --bg-primary: #191a21;
+  --bg-secondary: #282a36;
+  --bg-btn: #21222c;
+  --content-primary: #f8f8f2;
+}
+
+.rn-button {
+  background-color: var(--bg-btn);
+}
+
+.rn-clr-background-accent {
+  color: var(--content-primary) !important;
+  background-color: var(--bg-btn);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rn-add-button:hover,
+  .hover\:rn-clr-background-accent--hovered:hover {
+    background: var(--bg-secondary) !important;
+  }
+}
+
+.rn-add-button {
+  color: var(--content-primary);
+}
+
+.rn-clr-content-primary {
+  color: var(--content-primary);
+}
+
+.rn-doc-title {
+  font-family: "IBM Plex Mono";
+}
+
+.rn-clr-background-primary {
+  background-color: var(--bg-primary);
+}
+
+.rn-clr-background-secondary {
+  background-color: var(--bg-secondary);
+}
+
+.rn-pane {
+  background-color: var(--bg-primary);
+}
+
+.rn-pane__body {
+  background-color: var(--bg-primary);
+}
+
+.rn-pane__top-bar {
+  background-color: var(--bg-primary);
+}
+
+#document-sidebar {
+  background-color: var(--bg-primary);
+}
+
+.search-results__no-results {
+  color: var(--content-primary);
+}
+
+.rn-clr-content-primary {
+  color: var(--content-primary);
+}
+
+.dark .bg-mint-10 {
+  background: rgba(30, 74, 53, 0.6);
+}

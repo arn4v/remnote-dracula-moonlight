@@ -1,0 +1,13 @@
+{
+  "manifestVersion": 1,
+  "id": "dracula-darker",
+  "name": "Dracula Darker",
+  "description": "Like Dracula, but darker.",
+  "author": "Arnav Gosain",
+  "repoUrl": "https://github.com/arn4v/dracula-darker",
+  "enableOnMobile": true,
+  "version": { "major": 1, "minor": 0, "patch": 0 },
+  "theme": ["dark"],
+  "requestNative": false,
+  "requiredScopes": []
+}
