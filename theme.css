@@ -1,10 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
 
 :root {
   --bg-primary: #191a21;
   --bg-secondary: #282a36;
   --bg-btn: #21222c;
   --content-primary: #f8f8f2;
+  --accent-brightness: 1;
+  --accent: rgba(189, 147, 249, var(--accent-brightness, 1));
+  --rn-clr-background-light-accent--hovered: background: rgba(189, 147, 249, 0.7) !important;
 }
 
 .rn-button {
@@ -32,7 +35,7 @@
 }
 
 .rn-doc-title {
-  font-family: "IBM Plex Mono";
+  font-family: 'IBM Plex Mono';
 }
 
 .rn-clr-background-primary {
@@ -69,4 +72,48 @@
 
 .dark .bg-mint-10 {
   background: rgba(30, 74, 53, 0.6);
+}
+
+.rem-reference {
+  color: var(--accent) !important;
+}
+
+.rem-reference:hover {
+  background: rgba(189, 147, 249, 0.3) !important;
+}
+
+.rn-clr-background-light-accent {
+  background: rgba(189, 147, 249, 0.8);
+}
+
+.rn-clr-content-accent {
+  color: var(--accent);
+}
+
+.rn-clr-content-accent.rn-clr-background-light-accent {
+  color: var(--content-primary);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .rn-date-header-item:hover {
+    background: rgba(189, 147, 249, 0.8) !important;
+    color: var(--content-primary) !important;
+  }
+  
+  .rn-date-header-item:hover .text-gray-40 {
+    color: var(--content-primary) !important;
+  }
+
+  
+  .hover\:rn-clr-background-light-accent--hovered:hover {
+    background: rgba(189, 147, 249, 0.8) !important;
+  }
+  
+  [data-cy="document-sidebar-top-link"]:hover {
+    background: rgba(189, 147, 249, 0.8) !important;	
+  }
+  
+  [data-cy="document-sidebar-top-link"]:hover svg {
+    color: var(--content-primary);
+  }
 }
