@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/ibm-plex-sans");
 
 :root {
   --bg-primary: #191a21;
@@ -7,37 +8,21 @@
   --content-primary: #f8f8f2;
   --accent-brightness: 1;
   --accent: rgba(189, 147, 249, var(--accent-brightness, 1));
-  --rn-clr-background-light-accent--hovered: background: rgba(189, 147, 249, 0.7) !important;
+  --rn-clr-background-light-accent--hovered: rgba(
+    189,
+    147,
+    249,
+    0.7
+  ) !important;
+  --rn-colors-blue-60: var(--acent);
 }
 
-.rn-button {
-  background-color: var(--bg-btn);
+html,
+body {
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
-.rn-clr-background-accent {
-  color: var(--content-primary) !important;
-  background-color: var(--bg-btn);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .rn-add-button:hover,
-  .hover\:rn-clr-background-accent--hovered:hover {
-    background: var(--bg-secondary) !important;
-  }
-}
-
-.rn-add-button {
-  color: var(--content-primary);
-}
-
-.rn-clr-content-primary {
-  color: var(--content-primary);
-}
-
-.rn-doc-title {
-  font-family: 'IBM Plex Mono';
-}
-
+/* Override core design tokens */
 .rn-clr-background-primary {
   background-color: var(--bg-primary);
 }
@@ -46,73 +31,127 @@
   background-color: var(--bg-secondary);
 }
 
-.rn-pane {
-  background-color: var(--bg-primary);
+.rn-clr-background-accent {
+  color: var(--content-primary) !important;
+  background-color: var(--bg-btn);
 }
 
-.rn-pane__body {
-  background-color: var(--bg-primary);
-}
-
-.rn-pane__top-bar {
-  background-color: var(--bg-primary);
-}
-
-#document-sidebar {
-  background-color: var(--bg-primary);
-}
-
-.search-results__no-results {
-  color: var(--content-primary);
+.rn-clr-background-light-accent {
+  background: rgba(189, 147, 249, 0.6);
 }
 
 .rn-clr-content-primary {
   color: var(--content-primary);
 }
 
-.dark .bg-mint-10 {
-  background: rgba(30, 74, 53, 0.6);
-}
-
-.rem-reference {
-  color: var(--accent) !important;
-}
-
-.rem-reference:hover {
-  background: rgba(189, 147, 249, 0.3) !important;
-}
-
-.rn-clr-background-light-accent {
-  background: rgba(189, 147, 249, 0.8);
-}
-
 .rn-clr-content-accent {
   color: var(--accent);
 }
-
+/* Override text color if element has accent color as both text and background */
 .rn-clr-content-accent.rn-clr-background-light-accent {
   color: var(--content-primary);
 }
 
+/* Override checkbox checked state background color */
+.rn-checkbox--checked {
+  background-color: var(--accent) !important;
+}
+
+/* Override switch background color (checked) */
+.rn-switch-root[data-state="checked"] {
+  background-color: var(--accent) !important;
+}
+
+/* Override switch background color (unchecked) */
+.rn-switch-root {
+  background-color: var(--bg-secondary) !important;
+}
+
+input[type="radio"] {
+  accent-color: var(--accent);
+}
+
+.dark {
+  /* Workaround to override blue accent text globally */
+  --rn-colors-blue-60: var(--accent);
+}
+
+/* Override for banner colors bgc */
+.dark .bg-orange-10 {
+  background-color: rgba(120, 31, 1, 0.3);
+}
+.dark .bg-mint-10 {
+  background: rgba(30, 74, 53, 0.6);
+}
+
+/* Override property suggestion square */
+.rn-editor__property-suggestions {
+  background-color: rgba(189, 147, 249, 0.3) !important;
+  color: rgba(189, 147, 249, 1) !important;
+}
+
+.rn-progress-bar {
+  background-color: var(--accent) !important;
+}
+
+/* Primary button color */
+.rn-button {
+  background-color: var(--bg-btn);
+}
+
+/* Sidebar "create" button color */
+.rn-add-button {
+  color: var(--content-primary);
+}
+
+/* Document title */
+.rn-doc-title {
+  font-family: "IBM Plex Mono";
+}
+
+/* Default background color */
+.rn-pane,
+.rn-pane__body,
+.rn-pane__top-bar,
+#document-sidebar {
+  background-color: var(--bg-primary);
+}
+
+/* Rem search results – No results */
+.search-results__no-results {
+  color: var(--content-primary);
+}
+
+/* Rem reference */
+.rem-reference {
+  color: var(--accent) !important;
+}
+.rem-reference:hover {
+  background: rgba(189, 147, 249, 0.3) !important;
+}
+
 @media (hover: hover) and (pointer: fine) {
+  .rn-add-button:hover,
+  .hover\:rn-clr-background-accent--hovered:hover {
+    background: var(--bg-secondary) !important;
+  }
+
   .rn-date-header-item:hover {
     background: rgba(189, 147, 249, 0.8) !important;
     color: var(--content-primary) !important;
   }
-  
+
   .rn-date-header-item:hover .text-gray-40 {
     color: var(--content-primary) !important;
   }
 
-  
   .hover\:rn-clr-background-light-accent--hovered:hover {
     background: rgba(189, 147, 249, 0.8) !important;
   }
-  
+
   [data-cy="document-sidebar-top-link"]:hover {
-    background: rgba(189, 147, 249, 0.8) !important;	
+    background: rgba(189, 147, 249, 0.6) !important;
   }
-  
   [data-cy="document-sidebar-top-link"]:hover svg {
     color: var(--content-primary);
   }
