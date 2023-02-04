@@ -1,10 +1,10 @@
 {
   "manifestVersion": 1,
   "id": "dracula-darker",
-  "name": "Dracula Darker",
+  "name": "Dracula Darker Theme",
   "description": "Like Dracula, but darker.",
   "author": "Arnav Gosain",
-  "repoUrl": "https://github.com/arn4v/dracula-darker",
+  "repoUrl": "https://github.com/arn4v/remnote-dracula-darker",
   "enableOnMobile": true,
   "version": { "major": 1, "minor": 0, "patch": 0 },
   "theme": ["dark"],
