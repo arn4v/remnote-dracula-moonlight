@@ -4,10 +4,12 @@
 :root {
   --bg-primary: #191a21;
   --bg-secondary: #282a36;
-  --bg-btn: #21222c;
+
   --content-primary: #f8f8f2;
+
   --accent-brightness: 1;
   --accent: rgba(189, 147, 249, var(--accent-brightness, 1));
+
   --rn-clr-background-light-accent--hovered: rgba(
     189,
     147,
@@ -15,11 +17,15 @@
     0.7
   ) !important;
   --rn-colors-blue-60: var(--acent);
+  --rn-clr-background-light-accent: var(--accent);
 }
 
 html,
 body {
   font-family: "IBM Plex Sans", sans-serif;
+}
+
+.dark {
 }
 
 /* Override core design tokens */
@@ -74,6 +80,11 @@ input[type="radio"] {
 .dark {
   /* Workaround to override blue accent text globally */
   --rn-colors-blue-60: var(--accent);
+  --rn-clr-background-light-accent: var(--accent);
+}
+
+.react-datepicker__day--today {
+  background-color: var(--accent);
 }
 
 /* Override for banner colors bgc */
@@ -110,10 +121,10 @@ input[type="radio"] {
 }
 
 /* Default background color */
-.rn-pane,
-.rn-pane__body,
-.rn-pane__top-bar,
-#document-sidebar {
+.dark .rn-pane,
+.dark .rn-pane__body,
+.dark .rn-pane__top-bar,
+.dark #document-sidebar {
   background-color: var(--bg-primary);
 }
 
@@ -130,10 +141,28 @@ input[type="radio"] {
   background: rgba(189, 147, 249, 0.3) !important;
 }
 
+.hierarchy-editor__tag-bar div {
+  background-color: unset !important;
+}
+
+.rn-tag {
+  background-color: var(--bg-secondary) !important;
+}
+
+#hierarchy-editor .portal-tree-node-box--focused {
+  border-color: var(--accent);
+}
+
+#hierarchy-editor .sticky-portal-tree-node-box:before,
+#hierarchy-editor .portal-tree-node-box:before {
+  background-color: var(--accent);
+}
+
 @media (hover: hover) and (pointer: fine) {
   .rn-add-button:hover,
   .hover\:rn-clr-background-accent--hovered:hover {
-    background: var(--bg-secondary) !important;
+    background: var(--bg-btn) !important;
+    filter: brightness(1.1);
   }
 
   .rn-date-header-item:hover {
@@ -154,5 +183,9 @@ input[type="radio"] {
   }
   [data-cy="document-sidebar-top-link"]:hover svg {
     color: var(--content-primary);
+  }
+
+  .dark .react-datepicker__day--today:hover {
+    background-color: var(--accent) !important;
   }
 }
