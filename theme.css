@@ -4,12 +4,11 @@
 :root {
   --bg-primary: #191a21;
   --bg-secondary: #282a36;
-
   --content-primary: #f8f8f2;
 
+  --bg-btn: var(--accent);
   --accent-brightness: 1;
   --accent: rgba(189, 147, 249, var(--accent-brightness, 1));
-
   --rn-clr-background-light-accent--hovered: rgba(
     189,
     147,
@@ -25,9 +24,6 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
-.dark {
-}
-
 /* Override core design tokens */
 .rn-clr-background-primary {
   background-color: var(--bg-primary);
@@ -39,7 +35,7 @@ body {
 
 .rn-clr-background-accent {
   color: var(--content-primary) !important;
-  background-color: var(--bg-btn);
+  background-color: var(--accent);
 }
 
 .rn-clr-background-light-accent {
@@ -121,10 +117,10 @@ input[type="radio"] {
 }
 
 /* Default background color */
-.dark .rn-pane,
-.dark .rn-pane__body,
-.dark .rn-pane__top-bar,
-.dark #document-sidebar {
+.rn-pane,
+.rn-pane__body,
+.rn-pane__top-bar,
+#document-sidebar {
   background-color: var(--bg-primary);
 }
 
