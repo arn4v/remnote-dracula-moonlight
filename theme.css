@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap");
-@import url("https://fonts.cdnfonts.com/css/ibm-plex-sans");
 
 :root {
   --bg-primary: #191a21;
@@ -17,14 +16,9 @@
   --rn-clr-background-light-accent: var(--accent);
 }
 
-html,
-body {
-  font-family: "IBM Plex Sans", sans-serif;
-}
-
 /* Override core design tokens */
 .rn-clr-background-primary {
-  background-color: var(--bg-primary);
+  background-color: var(--bg-primary) !important;
 }
 
 .rn-clr-background-secondary {
@@ -103,6 +97,10 @@ input[type="radio"] {
 .rn-button {
   background-color: var(--accent);
   transition: 50ms background-color ease-out;
+}
+
+.react-datepicker__input-container > .rn-button {
+  background-color: var(--bg-primary);
 }
 
 /* Sidebar "create" button color */
