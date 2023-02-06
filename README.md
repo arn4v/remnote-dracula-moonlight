@@ -2,4 +2,4 @@
 
 Like Dracula, but darker.
 
-![](screenshots/1.png)
+![](https://raw.githubusercontent.com/arn4v/remnote-dracula-darker/main/screenshots/1.png)
