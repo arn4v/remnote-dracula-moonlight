@@ -4,9 +4,8 @@
 :root {
   --bg-primary: #191a21;
   --bg-secondary: #282a36;
+  --bg-btn: #21222c;
   --content-primary: #f8f8f2;
-
-  --bg-btn: var(--accent);
   --accent-brightness: 1;
   --accent: rgba(189, 147, 249, var(--accent-brightness, 1));
   --rn-clr-background-light-accent--hovered: rgba(
@@ -35,7 +34,7 @@ body {
 
 .rn-clr-background-accent {
   color: var(--content-primary) !important;
-  background-color: var(--accent);
+  background-color: var(--bg-btn);
 }
 
 .rn-clr-background-light-accent {
@@ -157,8 +156,7 @@ input[type="radio"] {
 @media (hover: hover) and (pointer: fine) {
   .rn-add-button:hover,
   .hover\:rn-clr-background-accent--hovered:hover {
-    background: var(--bg-btn) !important;
-    filter: brightness(1.1);
+    background: var(--bg-secondary) !important;
   }
 
   .rn-date-header-item:hover {
