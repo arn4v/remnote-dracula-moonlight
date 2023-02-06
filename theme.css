@@ -4,7 +4,6 @@
 :root {
   --bg-primary: #191a21;
   --bg-secondary: #282a36;
-  --bg-btn: #21222c;
   --content-primary: #f8f8f2;
   --accent-brightness: 1;
   --accent: rgba(189, 147, 249, var(--accent-brightness, 1));
@@ -34,7 +33,7 @@ body {
 
 .rn-clr-background-accent {
   color: var(--content-primary) !important;
-  background-color: var(--bg-btn);
+  background-color: var(--accent);
 }
 
 .rn-clr-background-light-accent {
@@ -102,7 +101,7 @@ input[type="radio"] {
 
 /* Primary button color */
 .rn-button {
-  background-color: var(--bg-btn);
+  background-color: var(--accent);
 }
 
 /* Sidebar "create" button color */
@@ -156,7 +155,8 @@ input[type="radio"] {
 @media (hover: hover) and (pointer: fine) {
   .rn-add-button:hover,
   .hover\:rn-clr-background-accent--hovered:hover {
-    background: var(--bg-secondary) !important;
+    background: var(--accent) !important;
+    filter: brightness(1.1);
   }
 
   .rn-date-header-item:hover {
