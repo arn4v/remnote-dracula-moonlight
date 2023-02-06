@@ -102,6 +102,7 @@ input[type="radio"] {
 /* Primary button color */
 .rn-button {
   background-color: var(--accent);
+  transition: 50ms background-color ease-out;
 }
 
 /* Sidebar "create" button color */
@@ -153,10 +154,10 @@ input[type="radio"] {
 }
 
 @media (hover: hover) and (pointer: fine) {
+  .rn-button:hover,
   .rn-add-button:hover,
   .hover\:rn-clr-background-accent--hovered:hover {
-    background: var(--accent) !important;
-    filter: brightness(1.1);
+    background: rgba(189, 147, 249, 0.7) !important;
   }
 
   .rn-date-header-item:hover {
